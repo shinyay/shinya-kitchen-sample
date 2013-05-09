@@ -1,7 +1,0 @@
-{"run_list":[
-	"hello",
-	"yum::epel",
-	"nginx"
-	"python"
- 	]
-}
