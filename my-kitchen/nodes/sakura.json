@@ -2,6 +2,8 @@
 	"hello",
 	"yum::epel",
 	"nginx",
-	"python"
+	"python",
+	"sphinx",
+	"tinkerer"
  	]
 }
