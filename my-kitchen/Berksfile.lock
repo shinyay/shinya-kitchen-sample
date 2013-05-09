@@ -1,0 +1,6 @@
+cookbook 'nginx', :locked_version => '1.6.0'
+cookbook 'build-essential', :locked_version => '1.4.0'
+cookbook 'apt', :locked_version => '1.9.2'
+cookbook 'runit', :locked_version => '1.1.4'
+cookbook 'ohai', :locked_version => '1.1.8'
+cookbook 'yum', :locked_version => '2.2.0'
