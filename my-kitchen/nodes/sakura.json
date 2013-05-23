@@ -4,6 +4,9 @@
 	"nginx",
 	"python",
 	"sphinx",
-	"tinkerer"
+	"tinkerer",
+	"base_packages",
+	"selinux::disabled",
+	"openssh"
  	]
 }
