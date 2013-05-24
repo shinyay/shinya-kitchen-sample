@@ -1,12 +1,18 @@
-{"run_list":[
-	"hello",
-	"yum::epel",
-	"nginx",
-	"python",
-	"sphinx",
-	"tinkerer",
-	"base_packages",
-	"selinux::disabled",
-	"openssh"
- 	]
+{
+"run_list":[
+	"recipe[hello]",
+	"recipe[yum::epel]",
+	"recipe[nginx]",
+	"recipe[python]",
+	"recipe[sphinx]",
+	"recipe[tinkerer]",
+	"recipe[base_packages]",
+	"recipe[selinux::disabled]",
+	"recipe[openssh]"
+ 	],
+"openssh": {
+	"server": {
+		"permit_root_login": "no"
+		}
+	}	
 }
