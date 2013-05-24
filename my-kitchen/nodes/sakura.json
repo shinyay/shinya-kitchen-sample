@@ -8,7 +8,8 @@
 	"recipe[tinkerer]",
 	"recipe[base_packages]",
 	"recipe[selinux::disabled]",
-	"recipe[openssh]"
+	"recipe[openssh]",
+	"recipe[custom-user]"
  	],
 "openssh": {
 	"server": {
