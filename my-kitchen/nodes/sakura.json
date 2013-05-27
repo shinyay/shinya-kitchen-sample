@@ -1,4 +1,11 @@
 {
+"user": {
+	"name": "shinyay",
+	"home": "/home/shinyay"
+	},
+"rbenv": {
+	"version": "1.9.3-p392"
+	},
 "run_list":[
 	"recipe[hello]",
 	"recipe[yum::epel]",
@@ -9,7 +16,8 @@
 	"recipe[base_packages]",
 	"recipe[selinux::disabled]",
 	"recipe[openssh]",
-	"recipe[custom-user]"
+	"recipe[custom-user]",
+	"recipe[rbenv-custom]"
  	],
 "openssh": {
 	"server": {

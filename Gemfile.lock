@@ -113,5 +113,5 @@ PLATFORMS
 DEPENDENCIES
   berkshelf
   chef
-  knife-solo (= 0.3.0.pre3)
+  knife-solo (>= 0.3.0.pre3)
   knife-solo_data_bag
