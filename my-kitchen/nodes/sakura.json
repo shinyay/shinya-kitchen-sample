@@ -17,7 +17,8 @@
 	"recipe[selinux::disabled]",
 	"recipe[openssh]",
 	"recipe[custom-user]",
-	"recipe[rbenv-custom]"
+	"recipe[rbenv-custom]",
+	"recipe[iptables-custom]"
  	],
 "openssh": {
 	"server": {
