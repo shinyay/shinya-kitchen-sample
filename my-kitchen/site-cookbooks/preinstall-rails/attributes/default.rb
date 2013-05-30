@@ -1,0 +1,26 @@
+node.default[:packages] = %w(
+  curl
+  curl-devel
+  gcc
+  gcc-c++
+  make
+  zlib-devel
+  openssl-devel
+  readline-devel
+  ncurses-devel
+  libxml2-devel
+  libxslt-devel
+  bzip2-devel
+  libjpeg-devel
+  libpng-devel
+  freetype-devel
+  libyaml
+  libyaml-devel
+  httpd-devel
+  tk-devel
+  libffi-devel
+  bison
+  autoconf 
+  automake 
+  libtool
+)

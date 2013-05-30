@@ -18,11 +18,42 @@
 	"recipe[openssh]",
 	"recipe[custom-user]",
 	"recipe[rbenv-custom]",
-	"recipe[iptables-custom]"
+	"recipe[iptables-custom]",
+	"recipe[preinstall-rails]",
+	"recipe[git]",
+	"recipe[sqlite]",
+	"recipe[mysql::client]",
+	"recipe[mysql::ruby]",
+	"recipe[mysql::server]",
+	"recipe[postgresql::ruby]",
+	"recipe[postgresql::server]",
+	"recipe[memcached]",
+	"recipe[nodejs::install_from_binary]",
+	"recipe[ruby_build]",
+	"recipe[rbenv::system]"
  	],
 "openssh": {
 	"server": {
-		"permit_root_login": "no"
+		"permit_root_login": "no",
+		"port": "10022"
 		}
-	}	
-}
+	},
+"mysql": {	
+	"server_root_password": "",
+	"server_debian_password": "",
+	"server_repl_password": ""
+	},
+"postgresql": {
+	"password": {
+		"postgres": ""
+		}
+	},
+"rbenv": {
+	"global": "2.0.0-p0",
+	"rubies": [ "2.0.0-p0" ],
+	"gems": {
+		"2.0.0-p0": [
+			{ "name": "bundler" }
+			]
+		}
+	}
