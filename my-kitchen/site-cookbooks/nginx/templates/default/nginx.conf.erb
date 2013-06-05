@@ -10,7 +10,18 @@ events {
 http {
   include /etc/nginx/mime.types;
   default_type application/octet-stream;
-  
+  sendfile on;
+  keepalive_timeout 65;
+
+  gzip on;
+  gzip_disable "msie6";
+  gzip_proxied any;
+  gzip_min_length 500;
+  gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+  # virtual Hosts
+  include /etc/nginx/sites-enabled/*;
+
   server {
     listen <%= node["nginx"]["port"] %>;
     server_name centos-test;

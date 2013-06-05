@@ -24,9 +24,26 @@ template "nginx.conf" do
   notifies :reload, "service[nginx]"
 end
 
-#directory "/etc/nginx/sites-enabled" do
+directory "/etc/nginx/sites-enabled" do
+  owner node["nginx"]["user"]
+  owner node["nginx"]["group"]
+  mode 0644
+  action :create
+end
+
+template "default.conf" do
+  path "/etc/nginx/sites-enabled/default.conf"
+  source "sites-enabled.conf.erb"
+  owner node["nginx"]["user"]
+  group node["nginx"]["group"]
+  mode 0644
+  notifies :reload, "service[nginx]"
+end
+
+#template "/etc/nginx/sites-enabled/default.conf" do
+#  source "sites-enabled.conf.erb"
 #  owner node["nginx"]["user"]
-#  owner group["nginx"]["group"]
+#  group node["nginx"]["group"]
 #  mode 0644
-#  action :create
+#  notifies :reload, 'service[nginx]'
 #end

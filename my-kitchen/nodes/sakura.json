@@ -31,6 +31,10 @@
 	"recipe[ruby_build]",
 	"recipe[rbenv::system]"
  	],
+"nginx": {
+  "application": "chef_rails_template",
+  "port": 80
+},
 "openssh": {
 	"server": {
 		"permit_root_login": "no",
