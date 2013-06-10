@@ -22,12 +22,12 @@ http {
   # virtual Hosts
   include /etc/nginx/sites-enabled/*;
 
-  server {
-    listen <%= node["nginx"]["port"] %>;
-    server_name centos-test;
-    location / {
-      root /usr/share/nginx/html;
-      index index.html index.htm;
-    }
-  }
+#  server {
+#    listen <%= node["nginx"]["port"] %>;
+#    server_name centos-test;
+#    location / {
+#      root /usr/share/nginx/html;
+#      index index.html index.htm;
+#    }
+#  }
 }
