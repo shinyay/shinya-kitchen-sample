@@ -38,7 +38,8 @@
 "openssh": {
 	"server": {
 		"permit_root_login": "no",
-		"port": "10022"
+		"port": "10022",
+		"subsystem": "sftp /usr/libexec/openssh/sftp-server"
 		}
 	},
 "mysql": {	
