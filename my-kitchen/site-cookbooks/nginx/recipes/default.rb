@@ -40,6 +40,13 @@ template "default.conf" do
   notifies :reload, "service[nginx]"
 end
 
+directory "/var/www" do
+  owner node["user"]["name"]
+  group node["user"]["group"]
+  mode 0755
+  action :create
+end
+
 #template "/etc/nginx/sites-enabled/default.conf" do
 #  source "sites-enabled.conf.erb"
 #  owner node["nginx"]["user"]
