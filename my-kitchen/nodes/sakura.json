@@ -8,6 +8,7 @@
 	"version": "1.9.3-p392"
 	},
 "run_list":[
+	"recipe[make_directory]",
 	"recipe[yum::epel]",
 	"recipe[nginx]",
 	"recipe[python]",
